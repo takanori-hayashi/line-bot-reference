@@ -11,15 +11,16 @@ const replyText = (token, texts) => {
 };
 
 const handleText = (message, replyToken, resource) => {
-  switch (message) {
+  const { text } = message;
+  switch (text) {
     default:
-      return replyText(replyToken, message.text)
+      return replyText(replyToken, text)
   }
 };
 
 const handleEvent = event => {
   const { replyToken, type } = event;
-  console.log(`type: ${type}`);
+  console.log(`event-type: ${type}`);
   switch (type) {
     case 'message':
       const { message, resource } = event;
