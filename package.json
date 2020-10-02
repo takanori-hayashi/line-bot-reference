@@ -1,0 +1,12 @@
+{
+  "name": "line-bot-reference",
+  "version": "1.0.0",
+  "description": "LINE Messaging API SDK example",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "takanori-hayashi",
+  "license": "UNLICENSED",
+  "private": true
+}
