@@ -4,6 +4,7 @@
   "description": "LINE Messaging API SDK example",
   "main": "./src/index.js",
   "scripts": {
+    "start": "node ./src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "takanori-hayashi",
