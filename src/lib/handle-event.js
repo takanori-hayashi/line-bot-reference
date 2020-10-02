@@ -4,6 +4,7 @@ const client = new line.Client(config);
 
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
+  console.log(`texts: ${texts}`);
   return client.replyMessage(
     token,
     texts.map(text => { type: 'text', text })
