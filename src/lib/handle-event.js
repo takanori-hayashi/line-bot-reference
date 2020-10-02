@@ -1,6 +1,6 @@
 const line = require('@line/bot-sdk');
 const config = require('../config');
-const client = new line.Client(config);
+let client = new line.Client(config);
 
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
