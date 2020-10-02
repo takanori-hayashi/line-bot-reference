@@ -7,7 +7,7 @@ const replyText = (token, texts) => {
   console.log(`texts: ${texts}`);
   return client.replyMessage(
     token,
-    texts.map(text => { type: 'text', text })
+    texts.map(text => ({ type: 'text', text }))
   );
 };
 
