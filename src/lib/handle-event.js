@@ -21,7 +21,7 @@ const handleEvent = event => {
   const { replyToken, type } = event;
   console.log(`type: ${type}`);
   switch (type) {
-    case 'text':
+    case 'message':
       const { message, resource } = event;
       return handleText(message, replyToken, resource);
   }
