@@ -26,7 +26,13 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     return res.status(500).end();
   }
 
-  res.sendStatus(200).send('OK');
+  // Promise.all(req.body.events.map(handleEvent))
+  //   .then(() => res.sendStatus(200).end())
+  //   .catch(err => {
+  //     console.error(err);
+  //   });
+
+  res.status(200).end();
 });
 
 app.listen(port, () => {
