@@ -18,8 +18,9 @@ const handleText = (message, replyToken, resource) => {
 };
 
 const handleEvent = event => {
-  const { replyToken } = event;
-  switch (event.type) {
+  const { replyToken, type } = event;
+  console.log(`type: ${type}`);
+  switch (type) {
     case 'text':
       const { message, resource } = event;
       return handleText(message, replyToken, resource);
