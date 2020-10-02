@@ -9,7 +9,7 @@ app.use('/assets', express.static('assets'));
 // line
 const line = require('@line/bot-sdk');
 const config = require('./config');
-const client = new line.Client(config);
+const handleEvent = require('./lib/handle-event');
 
 // route:index
 app.get('/', (req, res) => {
@@ -23,16 +23,15 @@ app.post('/webhook', line.middleware(config), (req, res) => {
 
   console.log(`req.body.events => ${Array.isArray(req.body.events)}`);
   if (!Array.isArray(req.body.events)) {
-    return res.status(500).end();
+    return res.status(500).end(`no events.`);
   }
 
-  // Promise.all(req.body.events.map(handleEvent))
-  //   .then(() => res.sendStatus(200).end())
-  //   .catch(err => {
-  //     console.error(err);
-  //   });
-
-  res.status(200).end();
+  Promise.all(req.body.events.map(handleEvent))
+    .then(() => res.status(200).end())
+    .catch(err => {
+      console.error(err);
+      res.status(500).end(`handler error.`);
+    });
 });
 
 app.listen(port, () => {
