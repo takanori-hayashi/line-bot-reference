@@ -17,6 +17,15 @@ app.get('/', (req, res) => {
 });
 
 app.post('/webhook', line.middleware(config), (req, res) => {
+  if (req.body.destination) {
+    console.log("Destination User ID: " + req.body.destination);
+  }
+
+  console.log(`req.body.events => ${Array.isArray(req.body.events)}`);
+  if (!Array.isArray(req.body.events)) {
+    return res.status(500).end();
+  }
+
   res.sendStatus(200).send('OK');
 });
 
