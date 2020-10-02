@@ -4,6 +4,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
+app.use('/assets', express.static('assets'));
 
 // line
 const line = require('@line/bot-sdk');
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/webhook', line.middleware(config), (req, res) => {
-  
+
 });
 
 app.listen(port, () => {
