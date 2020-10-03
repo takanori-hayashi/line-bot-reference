@@ -14,6 +14,8 @@ const replyText = (token, texts) => {
 const handleText = (message, replyToken, resource) => {
   const { text } = message;
   switch (text) {
+    case 'ボタン':
+      
     default:
       return replyText(replyToken, text)
   }
