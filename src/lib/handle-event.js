@@ -1,6 +1,9 @@
 const line = require('@line/bot-sdk');
 const config = require('../config');
-let client = new line.Client(config);
+const client = new line.Client(config);
+
+// require templates
+const buttons = require('./templates/buttons');
 
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
@@ -15,7 +18,7 @@ const handleText = (message, replyToken, resource) => {
   const { text } = message;
   switch (text) {
     case 'ボタン':
-      
+      return client.replyMessage(replyToken, buttons);
     default:
       return replyText(replyToken, text)
   }

@@ -16,10 +16,10 @@ const buttos = {
     },
     {
       label: 'あなたにメッセージを送る',
-      type: 'postback',
-      uri: 'こんにちは！ボタンを押してくれてありがとうございます！',
+      type: 'message',
+      uri: 'こんばんわ！元気ですか？',
     },
   ],
 };
 
-module.exports
+module.exports = buttos;
