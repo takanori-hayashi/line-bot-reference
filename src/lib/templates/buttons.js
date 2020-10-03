@@ -7,15 +7,19 @@ const buttons = {
     text: 'ボタンをタップしてください',
     actions: [
       {
-        label: 'LINE アプリ',
+        label: '商品を見る',
         type: 'uri',
         uri: 'https://line.me/ja/',
       },
       {
-        label: 'あなたに返信する',
+        label: '購入する',
+        // ポストバックイベントに使用
         type: 'postback',
-        data: 'こんにちは！ボタンを押してくれてありがとうございます！',
-        text: 'こんにちは！ボタンを押してくれてありがとうございます！',
+        // webhookを通してpostback.dataプロパティで返される文字列
+        // 最大300文字
+        data: 'action=buy',
+        // アクション実行時ユーザーのメッセージとして表示する文字列
+        dispalyText: '商品を購入します',
       },
       {
         label: 'メッセージを送る',
