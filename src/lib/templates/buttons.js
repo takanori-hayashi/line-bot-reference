@@ -2,7 +2,7 @@ const buttons = {
   type: 'template',
   altText: 'ボタン',
   template: {
-    type: 'buttos',
+    type: 'buttons',
     title: 'ボタンサンプル',
     text: 'ボタンをタップしてください',
     actions: [
