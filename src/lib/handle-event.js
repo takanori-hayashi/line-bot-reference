@@ -4,6 +4,7 @@ const client = new line.Client(config);
 
 // require templates
 const buttons = require('./templates/buttons');
+const emojis = require('./templates/emojis');
 
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
