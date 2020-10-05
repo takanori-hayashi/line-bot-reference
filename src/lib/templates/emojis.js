@@ -3,12 +3,12 @@ const emojis = {
   text: '$ おすし $',
   emojis: [
     {
-      // index: 0,
+      index: 0,
       productId: '5ac1de17040ab15980c9b438',
       emojiId: '025',
     },
     {
-      // index: 10,
+      index: 9,
       productId: '5ac1bfd5040ab15980c9b435',
       emojiId: '094',
     },
