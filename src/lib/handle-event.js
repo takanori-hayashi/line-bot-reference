@@ -19,6 +19,8 @@ const handleText = (message, replyToken, resource) => {
   switch (text) {
     case 'ボタン':
       return client.replyMessage(replyToken, buttons);
+    case '絵文字':
+      return client.replyMessage(replyToken, emojis);
     default:
       return replyText(replyToken, text)
   }
