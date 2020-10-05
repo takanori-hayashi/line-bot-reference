@@ -1,6 +1,9 @@
+// https://developers.line.biz/ja/reference/messaging-api/#text-message
+
 const emojis = {
   type: 'text',
   text: '$ おすし $',
+  // https://d.line-scdn.net/r/devcenter/sendable_line_emoji_list.pdf
   emojis: [
     {
       index: 0,
