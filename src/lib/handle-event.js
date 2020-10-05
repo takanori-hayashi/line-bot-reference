@@ -5,6 +5,7 @@ const client = new line.Client(config);
 // require templates
 const buttons = require('./messages/templates/buttons');
 const emojis = require('./messages/emojis');
+const sticker = require('./messages/sticker');
 
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
@@ -22,6 +23,8 @@ const handleText = (message, replyToken, resource) => {
       return client.replyMessage(replyToken, buttons);
     case '絵文字':
       return client.replyMessage(replyToken, emojis);
+    case 'スタンプ':
+      return client.replyMessage(replyToken, sticker);
     default:
       return replyText(replyToken, text)
   }
