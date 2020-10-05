@@ -1,9 +1,14 @@
-// https://developers.line.biz/ja/reference/messaging-api/#text-message
+/**
+ * テキストメッセージ（絵文字）
+ * https://developers.line.biz/ja/reference/messaging-api/#text-message
+ * 
+ * 絵文字リスト
+ * https://d.line-scdn.net/r/devcenter/sendable_line_emoji_list.pdf
+ */
 
 const emojis = {
   type: 'text',
   text: '$ おすし $',
-  // https://d.line-scdn.net/r/devcenter/sendable_line_emoji_list.pdf
   emojis: [
     {
       index: 0,
