@@ -8,7 +8,7 @@ const emojis = {
       emojiId: '025',
     },
     {
-      index: 9,
+      index: 6,
       productId: '5ac1bfd5040ab15980c9b435',
       emojiId: '094',
     },
