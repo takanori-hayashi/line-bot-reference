@@ -26,8 +26,8 @@ const handleText = (message, replyToken, resource) => {
       return client.replyMessage(replyToken, emojis);
     case 'スタンプ':
       return client.replyMessage(replyToken, sticker);
-    case 'アイコン':
-      return client.replyMessage(replyToken, iconDisplay)
+    // case 'アイコン':
+    //   return client.replyMessage(replyToken, iconDisplay)
     default:
       return replyText(replyToken, text)
   }
