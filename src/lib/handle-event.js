@@ -6,6 +6,7 @@ const client = new line.Client(config);
 const buttons = require('./messages/templates/buttons');
 const emojis = require('./messages/emojis');
 const sticker = require('./messages/sticker');
+const iconDisplay = require('./messages/icon-display');
 
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
