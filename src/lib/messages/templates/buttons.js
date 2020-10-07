@@ -19,7 +19,7 @@ const buttons = {
         // 最大300文字
         data: 'action=buy',
         // アクション実行時ユーザーのメッセージとして表示する文字列
-        dispalyText: '商品を購入します',
+        displayText: '商品を購入します',
       },
       {
         label: 'メッセージを送る',
