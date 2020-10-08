@@ -4,7 +4,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-app.use('/assets', express.static('assets'));
+app.use('/assets', express.static(__dirname + '/assets'));
 
 // line
 const line = require('@line/bot-sdk');
