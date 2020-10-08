@@ -2,12 +2,15 @@ const line = require('@line/bot-sdk');
 const config = require('../config');
 const client = new line.Client(config);
 
-// require templates
-const buttons = require('./messages/templates/buttons');
+// require messages
 const emojis = require('./messages/emojis');
 const sticker = require('./messages/sticker');
 const iconDisplay = require('./messages/icon-display');
 const replyImage = require('./messages/image');
+
+// require templates
+const buttons = require('./messages/templates/buttons');
+
 
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
