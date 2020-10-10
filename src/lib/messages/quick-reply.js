@@ -8,7 +8,14 @@ const quickReply = {
           label: 'メッセージ',
           text: 'メッセージ',
         },
-      }
+      },
+      {
+        type: 'action',
+        action: {
+          type: 'camera',
+          label: 'カメラ'
+        },
+      },
     ],
   }
 };
