@@ -35,6 +35,7 @@ const handleText = (message, replyToken, resource) => {
     case '画像':
       return client.replyMessage(replyToken, replyImage);
     case 'クイック':
+      console.log('set: quick reply');
       return client.replyMessage(replyToken, quickReply);
     default:
       return replyText(replyToken, text)
