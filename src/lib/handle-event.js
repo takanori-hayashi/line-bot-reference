@@ -7,10 +7,10 @@ const emojis = require('./messages/emojis');
 const sticker = require('./messages/sticker');
 const iconDisplay = require('./messages/icon-display');
 const replyImage = require('./messages/image');
+const quickReply = require('./messages/quick-reply');
 
 // require templates
 const buttons = require('./messages/templates/buttons');
-
 
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
@@ -34,6 +34,8 @@ const handleText = (message, replyToken, resource) => {
       return client.replyMessage(replyToken, iconDisplay);
     case '画像':
       return client.replyMessage(replyToken, replyImage);
+    case 'クイック':
+      return client.replyMessage(replyToken, quickReply);
     default:
       return replyText(replyToken, text)
   }
