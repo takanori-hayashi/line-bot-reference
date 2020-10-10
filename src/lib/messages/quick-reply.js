@@ -9,7 +9,7 @@ const quickReply = {
         action: {
           type: 'message',
           label: 'メッセージ',
-          text: 'メッセージ',
+          text: 'クイックメッセージ！',
         },
       },
       {
