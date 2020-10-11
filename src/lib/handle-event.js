@@ -8,6 +8,7 @@ const sticker = require('./messages/sticker');
 const iconDisplay = require('./messages/icon-display');
 const replyImage = require('./messages/image');
 const quickReply = require('./messages/quick-reply');
+const locationMessage = require('./messages/location');
 
 // require templates
 const buttons = require('./messages/templates/buttons');
@@ -35,8 +36,9 @@ const handleText = (message, replyToken, resource) => {
     case '画像':
       return client.replyMessage(replyToken, replyImage);
     case 'クイック':
-      console.log('set: quick reply');
       return client.replyMessage(replyToken, quickReply);
+    case '位置情報':
+      return client.replyMessage(replyToken, locationMessage);
     default:
       return replyText(replyToken, text)
   }
