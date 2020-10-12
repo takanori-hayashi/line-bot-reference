@@ -1,4 +1,4 @@
-const quickReply = {
+module.exports = {
   type: 'text',
   text: 'クイックリプライのサンプルです！',
   // テキストメッセージにquickReplyを追加
@@ -22,5 +22,3 @@ const quickReply = {
     ],
   }
 };
-
-module.exports = quickReply;
