@@ -1,4 +1,4 @@
-const iconDisplay = {
+module.exports = {
   type: 'text',
   text: 'こんにちは！',
   sender: {
@@ -6,5 +6,3 @@ const iconDisplay = {
       iconUrl: 'https://source.unsplash.com/random/1000x1000'
   }
 };
-
-module.exports = iconDisplay;

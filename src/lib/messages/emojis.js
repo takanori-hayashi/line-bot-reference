@@ -6,7 +6,7 @@
  * https://d.line-scdn.net/r/devcenter/sendable_line_emoji_list.pdf
  */
 
-const emojis = {
+module.exports = {
   type: 'text',
   text: '$ おすし $',
   emojis: [
@@ -22,5 +22,3 @@ const emojis = {
     },
   ],
 };
-
-module.exports = emojis;

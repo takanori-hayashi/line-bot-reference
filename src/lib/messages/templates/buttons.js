@@ -1,4 +1,4 @@
-const buttons = {
+module.exports = {
   type: 'template',
   altText: 'ボタン',
   template: {
@@ -29,5 +29,3 @@ const buttons = {
     ],
   }
 };
-
-module.exports = buttons;
