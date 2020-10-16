@@ -1,5 +1,5 @@
 module.exports = {
   type: 'image',
-  originalContentUrl: `https://api-line-bot-example.herokuapp.com/assets/images/img_cat_org.jpg`,
-  previewImageUrl: `https://api-line-bot-example.herokuapp.com/assets/images/img_cat.jpg`,
+  originalContentUrl: `${process.env.APP_URL}/assets/images/img_cat_org.jpg`,
+  previewImageUrl: `${process.env.APP_URL}/assets/images/img_cat.jpg`,
 };
