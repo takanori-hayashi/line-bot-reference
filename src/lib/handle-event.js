@@ -10,6 +10,7 @@ const replyImage = require('./messages/image');
 const quickReply = require('./messages/quick-reply');
 const locationMessage = require('./messages/location');
 const video = require('./messages/video');
+const audio = require('./messages/audio');
 
 // require templates
 const buttons = require('./messages/templates/buttons');
@@ -42,6 +43,8 @@ const handleText = (message, replyToken, resource) => {
       return client.replyMessage(replyToken, locationMessage);
     case 'ビデオ':
       return client.replyMessage(replyToken, video);
+    case 'オーディオ':
+      return client.replyMessage(replyToken, audio);
     default:
       return replyText(replyToken, text)
   }
